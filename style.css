@@ -1,0 +1,140 @@
+/* Resetting margin and padding for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Main Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Section Titles */
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Form and Input Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea, 
+select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+/* Email Preview */
+.email-preview {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.email-preview button {
+    margin-top: 10px;
+}
+
+/* Footer */
+.footer-basic {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-basic a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-basic p {
+    margin: 0;
+}

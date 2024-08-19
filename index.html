@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Mail Dispatcher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/npm/animate.css@3.5.2/animate.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#"><h1>EXPOSYS DATA LABS</h1></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="container">
+                <div class="selected animated fadeInDown delay-4s">
+                    <h1 id="head">Mass Mail Dispatcher</h1>
+                    <input type="file" id="upload" accept="text/csv">
+                </div>
+            </div>
+        </section>
+
+        <section class="mail-form">
+            <div class="container">
+                <div class="mailinfo">
+                    <form id="mailForm">
+                        <h2 id="box-heading">Compose Your Mail</h2>
+                        <p><input type="text" id="subject" placeholder="Subject" required></p>
+                        <p>
+                            <label for="templateSelector">Select Template:</label>
+                            <select id="templateSelector">
+                                <option value="">--Select a template--</option>
+                                <option value="template1">Template 1</option>
+                                <option value="template2">Template 2</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="customTemplate">Or Enter Custom Template:</label>
+                            <textarea id="customTemplate" rows="12" placeholder="Enter your custom template here..."></textarea>
+                        </p>
+                        <p><button type="submit" id="submit">Send</button></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="email-preview" id="previewContainer" style="display:none;">
+            <div class="container">
+                <h2>Email Preview</h2>
+                <p><strong>Subject:</strong> <span id="previewSubject"></span></p>
+                <p><strong>Body:</strong></p>
+                <p id="previewBody"></p>
+                <button onclick="confirmSend()">Confirm and Send</button>
+                <button onclick="cancelSend()">Cancel</button>
+            </div>
+        </section>
+
+        <section class="email-history">
+            <div class="container">
+                <h2>Email Sending History</h2>
+                <table id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="email-tables">
+            <div class="container">
+                <div class="valTab">
+                    <table id="val">
+                        <thead>
+                            <tr>
+                                <th>Valid Emails</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="invaltab">
+                    <table id="invaltab">
+                        <thead>
+                            <tr>
+                                <th>Invalid Emails</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-basic">
+            <p class="copyright">Made by <a href="https://www.linkedin.com/in/prem-kumar/" target="_blank">Prem</a></p>
+        </div>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>
+        var wow = new WOW({
+            boxclass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true,
+            callback: function (box) {},
+            scrollContainer: null,
+            resetAnimation: true,
+        });
+        wow.init();
+    </script>
+</body>
+</html>
